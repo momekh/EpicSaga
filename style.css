@@ -1,0 +1,465 @@
+/*!
+ * Theme Name:  Epic Saga
+ * Theme URI:   http://themehybrid.com/themes/theme-slug
+ * Description: Writing your heart out. But with a sidebar.
+ * Version:     1.0.0
+ * Author:      Momekh Burki
+ * Author URI:  http://designby.momekh.com
+ * Tags:        custom-background, custom-colors, custom-header
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    saga
+ */
+/* line 1, sass/sidr/_sidr-base.scss */
+.sidr {
+  /* Default Settings */
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 300px;
+  overflow-x: none;
+  overflow-y: auto;
+  /* Theme Settings */
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 15px;
+  background: #333333;
+  color: #aaaaaa;
+  /*
+   * Widget Titles
+   * Widget Links
+   * Widget Text
+   * Widget Lists (Most are shown as lists so dealing with ul and li)
+   * Forms, including the default WP search form (via searchform.php)
+   */
+  /** Form Styling **/
+}
+/* line 13, sass/sidr/_sidr-base.scss */
+.sidr .sidr-inner {
+  padding: 0 0 15px;
+}
+/* line 16, sass/sidr/_sidr-base.scss */
+.sidr .sidr-inner > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 22, sass/sidr/_sidr-base.scss */
+.sidr.right {
+  left: auto;
+  right: -300px;
+}
+/* line 27, sass/sidr/_sidr-base.scss */
+.sidr.left {
+  left: -300px;
+  right: auto;
+}
+/* line 39, sass/sidr/_sidr-base.scss */
+.sidr h1, .sidr h2, .sidr h3, .sidr h4, .sidr h5, .sidr h6 {
+  font-size: 21px;
+  font-weight: normal;
+  padding: 0 15px;
+  margin: 0 0 5px;
+  color: white;
+  line-height: 31px;
+}
+/* line 60, sass/sidr/_sidr-base.scss */
+.sidr h3 {
+  text-shadow: 2px 2px 0 #222222;
+  font-size: 21px;
+}
+/* line 70, sass/sidr/_sidr-base.scss */
+.sidr a {
+  font-weight: 400;
+  color: #eeeeee;
+  font-size: 15px;
+  padding: 0 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 78, sass/sidr/_sidr-base.scss */
+.sidr a:hover {
+  color: #aa4141;
+}
+/* line 86, sass/sidr/_sidr-base.scss */
+.sidr p {
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+/* line 90, sass/sidr/_sidr-base.scss */
+.sidr p a {
+  font-weight: 400;
+  color: #eeeeee;
+  font-size: 15px;
+  padding: 0 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 97, sass/sidr/_sidr-base.scss */
+.sidr p a:hover {
+  color: #aa4141;
+}
+/* line 103, sass/sidr/_sidr-base.scss */
+.sidr > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* line 111, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-widget {
+  border-bottom: 1px dashed #404040;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+/* line 117, sass/sidr/_sidr-base.scss */
+.sidr ul {
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+}
+/* line 124, sass/sidr/_sidr-base.scss */
+.sidr ul li {
+  display: block;
+  margin: 0 0 0 15px;
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+/* line 133, sass/sidr/_sidr-base.scss */
+.sidr ul li a {
+  font-weight: 400;
+  color: #eeeeee;
+  font-size: 15px;
+  padding: 0 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 141, sass/sidr/_sidr-base.scss */
+.sidr ul li a:hover {
+  color: #aa4141;
+}
+/* line 146, sass/sidr/_sidr-base.scss */
+.sidr ul li span {
+  display: inline-block;
+}
+/* line 152, sass/sidr/_sidr-base.scss */
+.sidr ul li ul {
+  border-bottom: none;
+  margin: 0;
+}
+/* line 155, sass/sidr/_sidr-base.scss */
+.sidr ul li ul li {
+  font-size: 13px;
+}
+/* line 159, sass/sidr/_sidr-base.scss */
+.sidr ul li ul li:last-child {
+  border-bottom: none;
+}
+/* line 165, sass/sidr/_sidr-base.scss */
+.sidr ul li ul li a, .sidr ul li ul li span {
+  color: #eeeeee;
+  padding-left: 30px;
+}
+/* line 174, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-screen-reader-text {
+  display: none;
+}
+/* line 177, sass/sidr/_sidr-base.scss */
+.sidr form {
+  margin: 0 15px;
+}
+/* line 181, sass/sidr/_sidr-base.scss */
+.sidr label {
+  font-size: 13px;
+}
+/* line 186, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+/* line 192, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+/* line 198, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group .sidr-class-input-group-addon,
+.sidr .sidr-class-input-group .sidr-class-input-group-btn,
+.sidr .sidr-class-input-group .sidr-class-form-control {
+  width: auto;
+}
+/* line 204, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group > .sidr-class-form-control {
+  width: 100%;
+}
+/* line 209, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group-addon,
+.sidr .sidr-class-input-group-btn,
+.sidr .sidr-class-input-group .sidr-class-form-control {
+  display: table-cell;
+}
+/* line 212, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group-addon:not(:first-child):not(:last-child),
+.sidr .sidr-class-input-group-btn:not(:first-child):not(:last-child),
+.sidr .sidr-class-input-group .sidr-class-form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+/* line 218, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-input-group-addon,
+.sidr .sidr-class-input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+/* line 226, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-field {
+  border: 2px solid #333;
+  border-right: none;
+}
+/* line 231, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-submit {
+  margin-top: -7px;
+  border: 1px solid #333;
+  border-left: none;
+  margin-left: -1px;
+  border-bottom-color: #222;
+  border-top: 1px solid #555;
+}
+/* line 238, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-submit:hover, .sidr .sidr-class-submit:focus {
+  text-decoration: none;
+}
+/* line 243, sass/sidr/_sidr-base.scss */
+.sidr .sidr-class-submit:before {
+  font-family: 'FontAwesome';
+  content: "\f002" !important;
+  font-size: 21px;
+  color: #fff;
+  padding: 0 .375rem 4px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+/* line 262, sass/sidr/_sidr-base.scss */
+.sidr input[type="text"],
+.sidr input[type="password"],
+.sidr input[type="date"],
+.sidr input[type="datetime"],
+.sidr input[type="email"],
+.sidr input[type="number"],
+.sidr input[type="search"],
+.sidr input[type="tel"],
+.sidr input[type="time"],
+.sidr input[type="url"],
+.sidr textarea, .sidr select {
+  width: 100%;
+  font-size: 13px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  background: #777;
+  color: #aaaaaa;
+  display: block;
+  clear: both;
+  -webkit-box-shadow: #333333 2px 2px 10px inset;
+  -moz-box-shadow: #333333 2px 2px 10px inset;
+  box-shadow: #333333 2px 2px 10px inset;
+}
+/* line 277, sass/sidr/_sidr-base.scss */
+.sidr input[type=checkbox] {
+  width: auto;
+  display: inline;
+  clear: none;
+}
+/* line 284, sass/sidr/_sidr-base.scss */
+.sidr input[type=button],
+.sidr input[type=submit] {
+  color: #333333;
+  background: #aaaaaa;
+}
+/* line 288, sass/sidr/_sidr-base.scss */
+.sidr input[type=button]:hover,
+.sidr input[type=submit]:hover {
+  background: #aaaaaa;
+}
+
+/* line 23, sass/sidr/_sidr-theme.scss */
+h3.sidr-class-widget-title {
+  padding-bottom: 15px;
+}
+
+/* line 28, sass/sidr/_sidr-theme.scss */
+h3.sidr-class-widget-title:before,
+h3.sidr-class-widget-title:after {
+  font-family: 'FontAwesome';
+  content: "\f005" !important;
+  color: #404040;
+  padding: 0 .375rem 4px;
+  text-shadow: none !important;
+  display: inline;
+  background: transparent;
+}
+
+/* line 13, sass/_sidr.scss */
+#sidr {
+  line-height: 20px;
+}
+/* line 15, sass/_sidr.scss */
+#sidr li > span {
+  font-size: 12px;
+}
+
+/* line 24, sass/_sidr.scss */
+#or.header-handler {
+  /*
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: -38px;
+  width: 0px;
+  border-left: 38px solid rgba(0, 0, 0, 0);
+  border-top: 38px solid;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.58;
+
+  z-index: 1000; */
+  float: right;
+  display: block;
+  line-height: 2.5rem;
+  min-width: 40px;
+  margin: 11px 0;
+  margin-left: -2px;
+  position: relative;
+  z-index: 10000;
+}
+@media screen and (max-width: 850px) {
+  /* line 24, sass/_sidr.scss */
+  #or.header-handler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    cursor: pointer;
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: 0.58;
+    z-index: 1000;
+  }
+}
+
+/* line 72, sass/_sidr.scss */
+.header-handler button.sidebar-toggle {
+  background-color: rgba(55, 55, 55, 0.75);
+}
+@media screen and (max-width: 850px) {
+  /* line 72, sass/_sidr.scss */
+  .header-handler button.sidebar-toggle {
+    background: transparent;
+  }
+}
+/* line 82, sass/_sidr.scss */
+.header-handler button.sidebar-toggle:hover, .header-handler button.sidebar-toggle:active, .header-handler button.sidebar-toggle:focus {
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* line 87, sass/_sidr.scss */
+.header-handler button.sidebar-toggle:before {
+  font-family: 'FontAwesome';
+  content: "\f03b";
+  font-size: 21px;
+  color: #fff;
+  padding: 0 .375rem 4px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 101, sass/_sidr.scss */
+.sidr-open .header-handler button:before {
+  content: "\f054";
+}
+
+/* line 105, sass/_sidr.scss */
+.header-handler:hover, .open-header {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+/* line 1, sass/_forms.scss */
+.form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 7, sass/_forms.scss */
+.input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+/* line 13, sass/_forms.scss */
+.input-group .input-group-addon,
+.input-group .input-group-btn,
+.input-group .form-control {
+  width: auto;
+}
+
+/* line 19, sass/_forms.scss */
+.input-group > .form-control {
+  width: 100%;
+}
+
+/* line 24, sass/_forms.scss */
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell;
+}
+/* line 27, sass/_forms.scss */
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* line 33, sass/_forms.scss */
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/*
+ * The Editables: Main classes/elements to change via customizer of editing for colors / button bg's
+ */
+/* 
+ * The links in parent are just too slow to transition
+ * 
+ */
+/* line 34, sass/style.scss */
+a, .entry-subtitle, label {
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+/*
+ * End of Editables
+ */
+@media screen and (max-width: 850px) {
+  /* line 65, sass/style.scss */
+  nav#menu-primary {
+    display: inline-block;
+  }
+}

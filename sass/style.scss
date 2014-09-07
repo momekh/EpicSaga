@@ -1,0 +1,74 @@
+/*!
+ * Theme Name:  Epic Saga
+ * Theme URI:   http://themehybrid.com/themes/theme-slug
+ * Description: Writing your heart out. But with a sidebar.
+ * Version:     1.0.0
+ * Author:      Momekh Burki
+ * Author URI:  http://designby.momekh.com
+ * Tags:        custom-background, custom-colors, custom-header
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    saga
+ */
+
+
+
+//--------//
+//importing styles for sidebar "toggle button"- 
+//the sidebar styling is controlled in functions.php
+@import "compass";
+@import "variables";
+@import "sidr";
+
+//Form stylings
+@import "forms";
+
+/*
+ * The Editables: Main classes/elements to change via customizer of editing for colors / button bg's
+ */
+
+/* 
+ * The links in parent are just too slow to transition
+ * 
+ */
+a, .entry-subtitle, label{
+  @include transition-duration(0.1s);
+}
+//To change Headers, the following classes/elements need editing
+h1.entry-title,
+h2.entry-title span.entry-title-primary, //the heading, when subtitle plugin is used 
+h2.entry-title span.entry-subtitle, //the subtitle, when subtitle plugin is used
+h2.entry-title a, //list view post titles 
+h3.sidr-class-widget-title //widget heading titles in sidr
+
+{
+  //color: green !important;
+}
+
+.sidr .sidr-class-submit //the search button
+{
+  //background-color: blue !important;
+  &:hover,
+  &:focus
+  {
+    //background-color: green !important;
+  }
+  
+}
+
+/*
+ * End of Editables
+ */
+
+
+
+nav#menu-primary {
+    @media screen and (max-width: 850px) {
+      display: inline-block; //the flyout menu problem
+  
+     }
+ }
+//Removing the boxed feel
+#container>.wrap, #header, #footer, #main {
+
+}

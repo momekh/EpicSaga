@@ -1,0 +1,292 @@
+.sidr {
+    /* Default Settings */
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 300px; //was 260px
+    overflow-x: none;
+    overflow-y: auto;
+
+    .sidr-inner {
+        padding: 0 0 15px;
+        
+        > p {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    &.right {
+        left: auto;
+        right: -300px;
+    }
+
+    &.left {
+        left: -300px;
+        right: auto;
+    }
+
+    /* Theme Settings */
+    font-family: $sidr-font-family;
+    font-size: $sidr-font-size;
+    background: $sidr-background;
+    color: $sidr-text-color;
+    //@include single-box-shadow($sidr-background-shadow-color, 0, 0, 5px, 5px, inset);
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: $sidr-header-font-size;
+        font-weight: normal;
+        padding: 0 15px;
+        margin: 0 0 5px;
+        color: $sidr-heading-color;
+        line-height: $sidr-header-font-size + 10; //24px;
+        //@include background-image(linear-gradient(lighten($sidr-background, 10%), darken($sidr-background, 10%)));
+        //@include single-box-shadow(rgba(#000, .2), 0, 5px, 5px, 3px);
+    }
+    
+    //***WordPressifying***//
+    /*
+     * Widget Titles
+     * Widget Links
+     * Widget Text
+     * Widget Lists (Most are shown as lists so dealing with ul and li)
+     * Forms, including the default WP search form (via searchform.php)
+     */
+    
+    //**Widget Titles**//
+    h3 { //h3 is the default widget title element. 
+      @include single-text-shadow($sidr-background-shadow-color, 2px, 2px, 0);
+      font-size: $sidr-header-font-size;
+      
+      
+    }
+    
+   
+    //**Widget Links**//
+    //Generic links applied to all sidr elements
+    a { //, > span {
+        //@include single-box-shadow($sidr-background-shadow-color, 0, 0, 15px, 3px, inset);
+        font-weight: 400;
+        color: $sidr-link-color;
+        font-size: $sidr-font-size;
+        padding: 0 15px;
+        display: inline-block;
+        text-decoration: none;
+        &:hover {
+          color: $sidr-link-hover-color;//#fff;
+        }
+    }   
+    
+    
+    
+    //**Widget Text**//
+    p {
+        font-size: $sidr-font-size - 2;
+        margin: 0 0 12px;
+        //sometimes the links and within the p tag ... bad WP, bad. 
+        a { //Copying from a above. 
+            font-weight: 400;
+            color: $sidr-link-color;
+            font-size: $sidr-font-size;
+            padding: 0 15px;
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+              color: $sidr-link-hover-color;//#fff;
+             }
+        }
+    }
+
+    > p {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    //**Widget Lists**//`
+      
+    .sidr-class-widget {
+      border-bottom: 1px dashed lighten($sidr-background, 5%);
+      padding-top: 25px;
+      padding-bottom: 25px;
+      
+    }
+    ul {
+        display: block;
+        margin: 0 0 15px;
+        padding: 0;
+        //border-top: 1px solid darken($sidr-background, 10%);
+        
+
+        li {
+            display: block;
+            margin: 0 0 0 15px;
+            //line-height: 48px;
+            border-top: none; // 1px solid lighten($sidr-background, 10%);
+            border-bottom: none; //1px solid darken($sidr-background, 10%);
+            margin-bottom: 15px;
+
+            
+            a { //, > span {
+                    //@include single-box-shadow($sidr-background-shadow-color, 0, 0, 15px, 3px, inset);
+                    font-weight: 400;
+                    color: $sidr-link-color;
+                    font-size: $sidr-font-size;
+                    padding: 0 5px;
+                    display: inline-block;
+                    text-decoration: none;
+                    &:hover {
+                      color: $sidr-link-hover-color;//#fff;
+                    }
+            }  
+            
+            span {
+             
+              display: inline-block;
+              
+            }
+
+            ul {
+                border-bottom: none;
+                margin: 0;
+                li {
+                    //line-height: 40px;
+                    font-size: $sidr-font-size - 2;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                 
+
+                    a, span {
+                        color: $sidr-link-color;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    /** Form Styling **/
+    .sidr-class-screen-reader-text {
+      display: none;
+    }
+    form {
+        margin: 0 15px;
+    }
+
+    label {
+        font-size: $sidr-font-size - 2;
+    }
+    //custom sidr injections
+    
+    .sidr-class-form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+    
+    .sidr-class-input-group {
+      display: inline-table;
+      vertical-align: middle;
+
+      .sidr-class-input-group-addon,
+      .sidr-class-input-group-btn,
+      .sidr-class-form-control {
+        width: auto;
+      }
+    }
+
+    // Input groups need that 100% width though
+    .sidr-class-input-group > .sidr-class-form-control {
+      width: 100%;
+    }
+    .sidr-class-input-group-addon,
+    .sidr-class-input-group-btn,
+    .sidr-class-input-group .sidr-class-form-control {
+      display: table-cell;
+    
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+    }
+    // Addon and addon wrapper for buttons
+    .sidr-class-input-group-addon,
+    .sidr-class-input-group-btn {
+      width: 1%;
+      white-space: nowrap;
+      vertical-align: middle; // Match the inputs
+    }
+    
+    //Search Bar Field
+    
+    .sidr-class-field {
+      border: 2px solid #333;
+      border-right: none;
+    }
+    //SEARCH BAR BUTTON CONTROL
+    .sidr-class-submit {
+      margin-top: -7px;
+      border: 1px solid #333;
+      border-left: none;
+      margin-left: -1px;
+      border-bottom-color: #222;
+      border-top: 1px solid #555;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+      
+    }
+    .sidr-class-submit:before {
+      font-family: 'FontAwesome';
+      content: "\f002" !important; //\f067";
+      font-size: 21px; //12px;
+      color: #fff;
+      padding: 0 .375rem 4px;
+      @include single-text-shadow(rgba(0,0,0,.2), 2px, 2px, 0 );
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea, select {
+        width: 100%;
+        font-size: $sidr-font-size - 2;
+        padding: 15px;
+        @include box-sizing(border-box);
+        margin: 0 0 10px;
+        @include border-radius(2px);
+        border: none;
+        background: #777;
+        color: $sidr-text-color;
+        display: block;
+        clear: both;
+        @include box-shadow(#333 2px 2px 10px inset);
+    }
+
+    input[type=checkbox] {
+        width: auto;
+        display: inline;
+        clear: none;
+    }
+
+    input[type=button],
+    input[type=submit] {
+        color: $sidr-background;
+        background: $sidr-text-color;
+
+        &:hover {
+            background: $sidr-text-color;
+        }
+    }
+}

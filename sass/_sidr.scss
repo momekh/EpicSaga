@@ -1,0 +1,110 @@
+// Fonts
+$sidr-font-family: $font-family-sans-serif;
+$sidr-font-size: $font-size-base;
+
+// Colors
+$sidr-background : $heading-color;
+$sidr-background-shadow-color: darken($heading-color, 5%);
+$sidr-text-color: $primary-bg-color;
+
+@import "sidr/sidr-theme";
+
+//Sidr Wordpress Specific Widget Stylings
+#sidr {
+  line-height: $sidr-font-size + 5;
+  li > span {
+    font-size: $sidr-font-size - 3;
+    
+  }
+}
+
+
+//Sidebar flyout toggle button
+  
+#or.header-handler {
+  /*
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: -38px;
+  width: 0px;
+  border-left: 38px solid rgba(0, 0, 0, 0);
+  border-top: 38px solid;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.58;
+
+  z-index: 1000; */
+
+  //background: rgba(0,0,0,.5); //rgba(231, 76, 60, 0.95);
+  float: right;
+  display: block;
+  line-height: 2.5rem;
+  //height: 33px;
+  min-width: 40px;
+  //padding: .5rem 5px;
+  margin: 11px 0;
+  margin-left: -2px;
+  position: relative;
+  z-index: 10000;
+  //border-left: 1px dashed rgba(255,85,67,1);
+ 
+ @media screen and (max-width: 850px) {
+   position: absolute;
+  top: 0;
+  right: 0;
+  //margin-bottom: -38px;
+  //width: 0px;
+  //border-left: 38px solid rgba(0, 0, 0, 0);
+  //border-top: 38px solid;
+  width: 40px;
+  cursor: pointer;
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.58;
+
+  z-index: 1000;
+ }
+ 
+}
+.header-handler {
+  button.sidebar-toggle {
+    background-color: rgba( 55, 55, 55, 0.75 );
+    
+    @media screen and (max-width: 850px) {
+      background: transparent; 
+    }
+    
+    
+    
+  }
+  button.sidebar-toggle:hover, button.sidebar-toggle:active, button.sidebar-toggle:focus {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+.header-handler button.sidebar-toggle:before {
+  
+  font-family: 'FontAwesome';
+  content: "\f03b"; //\f067";
+  font-size: 21px; //12px;
+  color: #fff;
+  padding: 0 .375rem 4px;
+  @include single-text-shadow(rgba(0,0,0,.2), 2px, 2px, 0 );
+  //position: absolute;
+  //top: -36px;
+  //right: 6px;
+
+}
+
+.sidr-open .header-handler button:before {
+  content: "\f054";
+}
+
+.header-handler:hover, .open-header {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+} 
+  

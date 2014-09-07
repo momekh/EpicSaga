@@ -1,0 +1,39 @@
+//Typography
+$sidr-font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+$sidr-font-size: 15px;
+
+// Background and setup
+$sidr-background : #333;
+$sidr-background-shadow-color : #222;
+
+//Text 
+$sidr-text-color: #aaa; //#FFF;
+$sidr-link-color: #eee;
+$sidr-link-hover-color: rgba(170,65,65,1);
+
+//Headings
+$sidr-heading-color: #fff; //rgba(170,65,65,1);
+$sidr-header-font-size: $sidr-font-size + 6;
+
+//Now importing sidr-base to apply the theme, uses the above variables. 
+//Change the above colors, do not change the sidr-base
+@import "sidr-base";
+
+
+h3.sidr-class-widget-title {
+  padding-bottom: 15px;
+}
+h3.sidr-class-widget-title:before, 
+h3.sidr-class-widget-title:after 
+{
+  font-family: 'FontAwesome';
+  content: "\f005" !important; //\f067";
+  //font-size: 17px; //12px;
+  color: lighten($sidr-background, 5%);
+  padding: 0 .375rem 4px;
+  text-shadow: none !important;
+  //@include single-text-shadow($sidr-background-shadow-color, 2px, 2px, 0 );
+  //The following is necessary because Saga styles the :after of h3's!!!
+  display: inline;
+  background: transparent;
+}
