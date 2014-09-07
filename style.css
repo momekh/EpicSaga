@@ -1,11 +1,11 @@
 /*!
  * Theme Name:  Epic Saga
- * Theme URI:   http://themehybrid.com/themes/theme-slug
+ * Theme URI:   http://themehybrid.com/themes/epic-saga
  * Description: Writing your heart out. But with a sidebar.
  * Version:     1.0.0
  * Author:      Momekh Burki
  * Author URI:  http://designby.momekh.com
- * Tags:        custom-background, custom-colors, custom-header
+ * Tags:        custom-background, custom-colors, custom-header, flyout-sidebar
  * License:     GNU General Public License v2.0 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Template:    saga
@@ -305,6 +305,17 @@ h3.sidr-class-widget-title:after {
   text-shadow: none !important;
   display: inline;
   background: transparent;
+}
+
+/* line 43, sass/sidr/_sidr-theme.scss */
+.sidr-class-widget_pages h3.sidr-class-widget-title {
+  display: none;
+}
+/* line 46, sass/sidr/_sidr-theme.scss */
+.sidr-class-widget_pages li > a {
+  font-family: Lato,sans-serif;
+  text-transform: uppercase;
+  font-weight: 700 !important;
 }
 
 /* line 13, sass/_sidr.scss */

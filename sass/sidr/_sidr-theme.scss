@@ -37,3 +37,17 @@ h3.sidr-class-widget-title:after
   display: inline;
   background: transparent;
 }
+
+//special styling for the Pages Widget
+.sidr-class-widget_pages {
+  h3.sidr-class-widget-title {
+    display: none;   
+  }
+  li > a {
+    font-family: Lato,sans-serif;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    
+  }
+
+}

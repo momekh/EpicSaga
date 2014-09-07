@@ -26,7 +26,7 @@
 					</div><!-- #branding -->
 
 				<?php endif; // End check for header text. ?>
-				<?php epicsaga_get_sidebar_toggle(); //Load the sidebar toggle using side ?>
+				<?php epic_saga_get_sidebar_toggle(); //Load the sidebar toggle using side ?>
 				<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 				
 

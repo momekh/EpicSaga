@@ -1,14 +1,14 @@
 <?php
 /**
- * @package    EpicSaga
+ * @package    Epic Saga
  * @author     Momekh Burki <mmk+epicsaga@momekh.com>
  * @copyright  Copyright (c) 2014, Momekh Burki
- * @link       http://themehybrid.com/themes/epicsaga
+ * @link       http://themehybrid.com/themes/epic-saga
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /* Add the child theme setup function to the 'after_setup_theme' hook. */
-add_action( 'after_setup_theme', 'epicsaga_theme_setup' );
+add_action( 'after_setup_theme', 'epic_saga_theme_setup' );
 
 /**
  * Setup function.  All child themes should run their setup within this function.  The idea is to add/remove 
@@ -18,30 +18,36 @@ add_action( 'after_setup_theme', 'epicsaga_theme_setup' );
  * @access public
  * @return void
  */
-function epicsaga_theme_setup() {
+function epic_saga_theme_setup() {
 
 	//* Disable the Admin Bar. */
 	add_filter( 'show_admin_bar', '__return_false' );
 	
-	add_action( 'wp_enqueue_scripts', 'epicsaga_enqueue_scripts_for_sidebar', 10 );
+	add_action( 'wp_enqueue_scripts', 'epic_saga_enqueue_scripts_for_sidebar', 10 );
 	
 	
-	//function epicsaga_sidebar_init() {
-		register_sidebar( array(
-			'name' => 'Sidebar',
-			'id' => 'sidebar-1',
-			'description' => __('This is the main sidebar display on the right', 'saga'),
-			'class' => '',
-			'before_widget' => '<aside class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>',
-		) ); 
+	/*
+	 * Registering Sidebar to be used in the flyout menu
+	 * 
+	 */
+	
+	 register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar-1',
+		'description' => __('This is the main sidebar display on the right', 'saga'),
+		'class' => '',
+		'before_widget' => '<aside class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) ); 
 
    
-	//}
-
-	//add_action('widgets_init','epicsaga_sidebar_init');
+	/*
+	 * Registering Social Menu - used in sidebar and footer
+	 */
+	 
+	 
 
 
 }
@@ -54,14 +60,14 @@ function epicsaga_theme_setup() {
  * @access public
  * @return void
  */
-function epicsaga_enqueue_scripts_for_sidebar () {
+function epic_saga_enqueue_scripts_for_sidebar () {
 	//Loading custom scripts
 	
 		if (is_active_sidebar( 'sidebar-1' )) {
 			
 			wp_enqueue_script( 'sidr', get_stylesheet_directory_uri() . '/inc/sidr/jquery.sidr.min.js', array( 'jquery' ), '1.2.1', true );
 			//wp_enqueue_style( 'sidr-styles', get_stylesheet_directory_uri() . '/inc/sidr/stylesheets/jquery.sidr.light.css' );
-			wp_enqueue_script( 'epicsaga-flyout', get_stylesheet_directory_uri() . '/js/epicsaga-sidr.js', array( 'jquery' ), '1.0', true );
+			wp_enqueue_script( 'epic_saga-flyout', get_stylesheet_directory_uri() . '/js/epic_saga-sidr.js', array( 'jquery' ), '1.0', true );
 		
 		}
 		
@@ -78,7 +84,7 @@ function epicsaga_enqueue_scripts_for_sidebar () {
  * @return void
  */
 
-function epicsaga_get_sidebar_toggle() {
+function epic_saga_get_sidebar_toggle() {
 	if (is_active_sidebar( 'sidebar-1' )) { //checks if the main sidebar has widgets
 	
 	
